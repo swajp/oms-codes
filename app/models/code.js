@@ -2,10 +2,10 @@ import mongoose, { Schema } from "mongoose";
 
 const codeSchema = new Schema({
   code: {
-    type: String,
+    type: Number,
+    unique: true,
     required: [true, "Pole nesmí být prázdné!"],
-    trim: true,
-    minLength: [2, "Kód musí obsahovat 10 čísel"],
+    minLength: [10, "Kód musí obsahovat 10 čísel"],
     maxLength: [10, "Kód musí obsahovat 10 čísel"],
   },
   date: {
