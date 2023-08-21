@@ -1,23 +1,10 @@
 import React from "react";
 import moment from "moment";
-
-const getCodes = async () => {
-  try {
-    const response = await fetch("http://localhost:3000/api/form/", {
-      cache: "no-cache",
-    });
-    if (!response.ok) {
-      throw new Error("Failed to fetch codes!");
-    }
-    return response.json();
-  } catch (error) {
-    console.log("Error while loading codes", error);
-  }
-};
-
-export default async function Codes() {
-  const { codes } = await getCodes();
-
+export default async function page() {
+  const response = await fetch("http://localhost:3000/api/form", {
+    cache: "no-cache",
+  });
+  const { codes } = await response.json();
   return (
     <section className="max-w-screen-xl  mx-auto p-4">
       <div className="py-28 md:py-48 lg:py-64">
