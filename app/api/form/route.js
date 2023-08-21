@@ -29,3 +29,13 @@ export async function POST(request) {
     }
   }
 }
+
+export async function GET() {
+  try {
+    await connectDB();
+    const codes = await Code.find().sort({ date: -1 });
+    return NextResponse.json({ codes });
+  } catch (error) {
+    console.log("Došlo k chybě!");
+  }
+}

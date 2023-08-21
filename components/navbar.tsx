@@ -10,7 +10,7 @@ export default function navbar() {
       <div className="flex gap-4">
         <Link href="/">
           <p
-            className={` hover:text-[#FFFF00] ${
+            className={`text-white hover:text-[#FFFF00] ${
               "/" === pathname ? "text-[#FFFF00]" : "text-white"
             }`}
           >
@@ -19,7 +19,7 @@ export default function navbar() {
         </Link>
         <Link href="/kody">
           <p
-            className={` hover:text-[#FFFF00] ${
+            className={`text-white hover:text-[#FFFF00] ${
               "/kody" === pathname ? "text-[#FFFF00]" : "text-white"
             }`}
           >
