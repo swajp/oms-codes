@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Form from "@/components/form";
 
 import Navbar from "@/components/navbar";
@@ -7,7 +8,7 @@ export default function Home() {
     <main className="bg-black">
       <Navbar />
       <Form />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

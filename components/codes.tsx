@@ -25,7 +25,7 @@ export default async function Codes() {
           POUŽITÉ KÓDY:
         </h1>
 
-        <div className="flex justify-between mb-6">
+        <div className="flex justify-between mb-2">
           <p className="text-white text-md md:text-xl lg:text-2xl font-black">
             ZADANÝ KÓD
           </p>

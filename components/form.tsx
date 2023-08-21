@@ -45,8 +45,11 @@ export default function Form() {
           id="code"
           onChange={(e) => setCode(e.target.value)}
           value={code}
-          className="bg-transparent text-white border-[3px] mb-4 placeholder:text-neutral-800 border-neutral-300  focus:ring-0 p-6 md:p-8 pl-3 md:pl-6 font-medium spacing tracking-wider text-xl md:text-5xl lg:text-6xl focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+          className="bg-transparent text-white border-[3px] mb-2 placeholder:text-neutral-800 border-neutral-300  focus:ring-0 p-6 md:p-8 pl-3 md:pl-6 font-medium spacing tracking-wider text-xl md:text-5xl lg:text-6xl focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
         />
+        <p className="text-white mb-4">
+          Buďme k sobě fér a zadejte kód, který jste opravdu použili :)
+        </p>
         <div className="flex ">
           <button className="text-black bg-[#FFFF00] p-2 md:p-4 text-lg md:text-2xl font-bold max-w-lg  hover:bg-white  transition-all">
             ODESLAT
