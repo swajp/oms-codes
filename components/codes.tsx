@@ -1,10 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 export default async function page() {
-  const response = await fetch(`${process.env.API_URL}/api/form`, {
-    cache: "no-cache",
-  });
-  const { codes } = await response.json();
+  const [codes, setCodes] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("/api/form", {
+        cache: "no-cache",
+      });
+      const { codes } = await response.json();
+      setCodes(codes);
+    }
+
+    fetchData();
+  }, []);
   return (
     <section className="max-w-screen-xl  mx-auto p-4">
       <div className="py-28 md:py-48 lg:py-64">
