@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 export default async function page() {
-  const response = await fetch("http://localhost:3000/api/form", {
+  const response = await fetch(`${process.env.API_URL}/api/form`, {
     cache: "no-cache",
   });
   const { codes } = await response.json();
