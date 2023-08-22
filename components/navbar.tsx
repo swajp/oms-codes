@@ -14,7 +14,7 @@ export default function navbar() {
               "/" === pathname ? "text-[#FFFF00]" : "text-white"
             }`}
           >
-            VLOŽENI KÓDU
+            VLOŽENÍ KÓDU
           </p>
         </Link>
         <Link href="/kody">

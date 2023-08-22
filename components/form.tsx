@@ -38,7 +38,7 @@ export default function Form() {
     <section className="h-screen w-full flex items-center bg-black content-center justify-center">
       <form onSubmit={handleSubmit} action="" className="flex flex-col">
         <p className="font-black text-[#FFFF00] text-2xl md:text-4xl lg:text-5xl mb-2 md:mb-4">
-          ZADEJTE 10-MISTNÝ KÓD
+          ZADEJTE 10-MÍSTNÝ KÓD
         </p>
         <input
           type="number"
