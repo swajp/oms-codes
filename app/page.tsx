@@ -1,13 +1,10 @@
 import Footer from "@/components/footer";
-import Form from "@/components/form";
-
-import Navbar from "@/components/navbar";
+import Maintenance from "@/components/maintenance";
 
 export default function Home() {
   return (
     <main className="bg-black">
-      <Navbar />
-      <Form />
+      <Maintenance />
       <Footer />
     </main>
   );
