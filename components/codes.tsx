@@ -3,10 +3,19 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 export default async function page() {
   const [codes, setCodes] = useState([]);
+  const [limit, setLimit] = useState(100);
+
+  async function fetchMoreData() {
+    const response = await fetch(`/api/form?limit=${limit}`, {
+      cache: "no-cache",
+    });
+    const { codes } = await response.json();
+    setCodes(codes);
+  }
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/api/form", {
+      const response = await fetch(`/api/form?limit=${limit}`, {
         cache: "no-cache",
       });
       const { codes } = await response.json();
@@ -15,6 +24,7 @@ export default async function page() {
 
     fetchData();
   }, []);
+
   return (
     <section className="max-w-screen-xl  mx-auto p-4">
       <div className="py-28 md:py-48 lg:py-64">
@@ -32,14 +42,27 @@ export default async function page() {
         </div>
         <>
           {codes.map((code: any) => (
-            <div className="text-white text-2xl md:text-4xl lg:text-4xl font-light flex justify-between">
-              <div key={code.id}>{code.code}</div>
-              <div key={code.id}>
-                {moment(code.date).format("DD/MM v hh:mm")}
+            <div
+              key={code.code}
+              className="text-white text-2xl md:text-4xl lg:text-4xl font-light flex justify-between"
+            >
+              <div key={code.code}>{code.code}</div>
+              <div key={code.date}>
+                {moment(code.date).format("DD/MM v HH:mm")}
               </div>
             </div>
           ))}
         </>
+
+        <button
+          className="bg-[#FFFF00] hover:bg-blue-700 text-black uppercase font-bold py-2 px-4 rounded mt-4"
+          onClick={() => {
+            setLimit(limit + 100);
+            fetchMoreData();
+          }}
+        >
+          ZOBRAZIT DALŠÍ
+        </button>
       </div>
     </section>
   );

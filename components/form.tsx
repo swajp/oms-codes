@@ -45,14 +45,14 @@ export default function Form() {
 
         setTimeout(() => {
           setIsSubmitting(false);
-        }, 60000);
+        }, 0);
       } else {
         setErrorInput("VYDRŽTE CHVÍLI PŘED DALŠÍM POSLÁNÍM...");
       }
     }
   };
   return (
-    <section className="h-screen w-full flex items-center bg-black content-center justify-center">
+    <section className="h-screen w-full flex items-center bg-black p-4 md:p-0 content-center justify-center">
       <form onSubmit={handleSubmit} action="" className="flex flex-col">
         <p className="font-black text-[#FFFF00] text-2xl md:text-4xl lg:text-5xl mb-2 md:mb-4">
           ZADEJTE 10-MÍSTNÝ KÓD
