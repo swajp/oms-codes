@@ -9,10 +9,11 @@ export default function ThanksPage() {
           <Image src="fakelogo.svg" alt="Logo" width={100} height={100} />
         </div>
 
-        <h1 className="font-black text-white text-4xl md:text-5xl lg:text-6xl mb-2 md:mb-4 text-left md:text-center p-8 ">
+        <h1 className="font-black text-white text-4xl md:text-5xl lg:text-6xl mb-2 md:mb-4 text-left md:text-center p-8 md:p-12 ">
           CHCETE SE <span className="text-[#FFFF00]">OBJEVIT</span> NA TÉTO
           STRÁNCE? <span className="text-[#FFFF00]">SDÍLEJTE</span> NÁS NA SOC.
-          SÍT POD HASTAGEM <span className="text-[#FFFF00]">#KAZMADRIE</span>
+          SÍTÍCH POD HASHTAGEM
+          <span className="text-[#FFFF00]">#KAZMADRIE</span>
         </h1>
       </div>
     </section>

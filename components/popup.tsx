@@ -32,11 +32,11 @@ export default function PopUp() {
         </p>
         <p className="text-white font-medium  text-md md:text-xl lg:text-2xl">
           Sdílejete s ostatními vaše kódy, kterými jste se pokusili odemčít
-          trezor
+          trezor.
         </p>
         <p className="text-white font-medium text-md md:text-xl lg:text-2xl mb-6">
-          Neručíme za to, že kódy, které zde jsou napsané byly opravdu použity.
-          Proto bychom ocenili, kdyby jste k sobě byli fér.
+          Neručíme za to, že kódy, které jsou zde napsané byly opravdu použity.
+          Proto bychom ocenili, kdybyste se k sobě chovali férově.
         </p>
         <button
           className="font-black text-md md:text-xl lg:text-2xl text-[#FFFF00] "

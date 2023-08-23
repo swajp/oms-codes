@@ -55,7 +55,7 @@ export default async function page() {
         </>
 
         <button
-          className="bg-[#FFFF00] hover:bg-blue-700 text-black uppercase font-bold py-2 px-4 rounded mt-4"
+          className="bg-[#FFFF00] hover:bg-[#fffc47] text-black uppercase font-bold py-2 px-4 rounded mt-4"
           onClick={() => {
             setLimit(limit + 100);
             fetchMoreData();
