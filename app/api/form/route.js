@@ -30,12 +30,14 @@ export async function POST(request) {
   }
 }
 
-export async function GET() {
+export async function GET(req, url) {
   try {
     await connectDB();
-    const codes = await Code.find().sort({ date: -1 });
+    const limit = req.url.split("limit=")[1];
+
+    const codes = await Code.find().sort({ date: -1 }).limit(limit);
     return NextResponse.json({ codes });
   } catch (error) {
-    console.log("Došlo k chybě!");
+    return NextResponse.json({ message: error, success: false });
   }
 }
