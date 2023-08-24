@@ -1,6 +1,9 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
+
 import moment from "moment";
+
 export default async function page() {
   const [codes, setCodes] = useState([]);
   const [limit, setLimit] = useState(100);

@@ -1,8 +1,11 @@
-import { NextResponse } from "next/server";
 import connectDB from "@/app/lib/mongodb";
 import mongoose from "mongoose";
-import Code from "@/app/models/code";
+
 import { getAuth } from "@clerk/nextjs/server";
+
+import { NextResponse } from "next/server";
+
+import Code from "@/app/models/code";
 
 export async function POST(request) {
   const { code } = await request.json();
