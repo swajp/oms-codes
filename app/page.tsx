@@ -5,7 +5,6 @@ import PopUp from "@/components/popup";
 export default function Home() {
   return (
     <main className="bg-black">
-      {/*<Form />*/}
       <Hero />
       <PopUp />
       <Footer />
