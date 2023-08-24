@@ -15,11 +15,15 @@ export default async function page() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`/api/form?limit=${limit}`, {
-        cache: "no-cache",
-      });
-      const { codes } = await response.json();
-      setCodes(codes);
+      try {
+        const response = await fetch(`/api/form?limit=${limit}`, {
+          cache: "no-cache",
+        });
+        const { codes } = await response.json();
+        setCodes(codes);
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     fetchData();

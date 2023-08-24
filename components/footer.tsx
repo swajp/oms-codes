@@ -3,13 +3,15 @@ import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
-  const date = new Date();
-  const year = date.getFullYear();
   return (
     <footer className="bg-black absolute bottom-0 left-0  ">
       <div className="p-8">
         <div className="md:mb-0">
-          <Link href="https://twitter.com/DRIECZ" className="flex items-center">
+          <Link
+            href="https://drie.cz"
+            className="flex items-center"
+            target="_blank"
+          >
             <span className="self-center text-md whitespace-nowrap text-white mr-2">
               Vytvořilo
             </span>

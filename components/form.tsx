@@ -17,9 +17,7 @@ export default function Form() {
       return;
     }
 
-    if (code.length !== 10) {
-      setErrorInput("KÓD MUSÍ OBSAHOVAT 10 ČÍSEL");
-    } else if (code.match(/[+-]/)) {
+    if (code.match(/^(?:[1-9]|10)$/)) {
       setErrorInput("KÓD NEMŮŽE OBSAHOVAT ZNAMÉNKO + NEBO -");
     } else {
       setErrorInput("");

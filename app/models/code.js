@@ -5,8 +5,15 @@ const codeSchema = new Schema({
     type: Number,
     unique: true,
     required: [true, "Pole nesmí být prázdné!"],
-    minLength: [10, "Kód musí obsahovat 10 čísel"],
-    maxLength: [10, "Kód musí obsahovat 10 čísel"],
+    validate: {
+      validator: function (v) {
+        return /^[0-9]{10}$/.test(v);
+      },
+      message: () => `KÓD MUSÍ OBSAHOVAT 10 ČÍSEL`,
+    },
+  },
+  userId: {
+    type: String,
   },
   date: {
     type: Date,
