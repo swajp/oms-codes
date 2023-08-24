@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { UserButton } from "@clerk/nextjs";
 
 const routes = [
   {
@@ -39,19 +40,24 @@ export default function Navbar() {
           aria-expanded="false"
         >
           {navbar ? (
-            <p className="text-white">ZAVŘÍT</p>
+            <p className="text-white pl-20 z-10  font-black text-lg bg-black">
+              ZAVŘÍT
+            </p>
           ) : (
-            <p className="text-white">MENU</p>
+            <p className="text-white pl-20 font-black text-lg">MENU</p>
           )}
         </button>
 
         <div
-          className={`items-center justify-center md:flex w-full md:w-auto ${
-            navbar ? "flex" : "hidden"
+          className={`md:items-center md:justify-center md:flex w-full md:w-auto ${
+            navbar ? "flex h-screen bg-black" : "hidden"
           }`}
           id="navbar-cta"
         >
           <ul className="flex flex-col font-semibold p-6 md:p-4 mt-3 md:flex-row md:space-x-8 md:mt-0 ">
+            <div className="p-4 md:p-8 md:absolute md:right-0 md:top-0">
+              <UserButton afterSignOutUrl="/" />
+            </div>
             {routes.map((route) => (
               <li key={route.label}>
                 <Link

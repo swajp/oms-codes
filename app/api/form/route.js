@@ -2,14 +2,15 @@ import { NextResponse } from "next/server";
 import connectDB from "@/app/lib/mongodb";
 import mongoose from "mongoose";
 import Code from "@/app/models/code";
+import { getAuth } from "@clerk/nextjs/server";
 
 export async function POST(request) {
   const { code } = await request.json();
-
   try {
+    const { userId } = getAuth(request);
     await connectDB();
-    await Code.create({ code });
-
+    await Code.create({ code, userId });
+    if (!userId) return NextResponse.json({ msg: "AUTORIZACE" });
     return NextResponse.json({
       msg: ["KÓD BYL ÚSPĚŠNĚ ULOŽEN"],
       success: true,

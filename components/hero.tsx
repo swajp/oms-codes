@@ -14,11 +14,12 @@ export default function Hero() {
           </div>
           <div className=" max-w-screen-2xl">
             <h1 className="font-black text-white text-2xl md:text-5xl lg:text-6xl mt-2 md:mt-4 text-center p-4">
-              ZKOUŠELI JSTE ZADAT KÓD U{" "}
-              <span className="text-[#FFFF00]">KAZMOVÉHO</span> TREZORU? MŮŽETE
-              SE O NĚJ <span className="text-[#FFFF00]">PODĚLIT</span> S
-              OSTATNÍMI A<span className="text-[#FFFF00]">ZABRÁNIT</span> TAK
-              OPAKOVÁNÍM SE!
+              ZKOUŠELI JSTE ZADAT KÓD DO{" "}
+              <span className="text-[#FFFF00]">KAZMOVA</span> TREZORU?{" "}
+              <span className="text-[#FFFF00]">POMOZTE</span> K VÝHŘE JINÝM
+              HRÁČŮM <span className="text-[#FFFF00]">ZADÁNÍM</span> VAŠEHO KÓDU
+              A SNIŽTE TAK ŠANCI NA OPAKOVÁNÍ CHYBNÝCH{" "}
+              <span className="text-[#FFFF00]">KÓDŮ</span>!
             </h1>
             <div className="flex justify-center gap-4">
               <button className="text-black p-2 md:p-4 bg-[#FFFF00] hover:bg-white transition-all font-bold uppercase text-md md:text-lg lg:text-xl">
