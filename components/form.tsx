@@ -60,6 +60,7 @@ export default function Form() {
           id="code"
           onChange={(e) => setCode(e.target.value)}
           value={code}
+          min={0}
           className="bg-transparent text-white border-[3px] mb-2 placeholder:text-neutral-800 border-neutral-300  focus:ring-0 p-6 md:p-8 pl-3 md:pl-6 font-medium spacing tracking-wider text-xl md:text-5xl lg:text-6xl focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
         />
         <input type="text" name="honeypot" style={{ display: "none" }} />

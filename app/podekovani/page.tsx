@@ -1,11 +1,9 @@
-import Navbar from "@/components/navbar";
 import Image from "next/image";
 import React from "react";
 
 export default function ThanksPage() {
   return (
     <section>
-      <Navbar />
       <div className="h-screen w-full flex py-16 md:py-32 lg:py-48 bg-black justify-center">
         <div>
           <div className="flex items-center justify-center content-center p-4">

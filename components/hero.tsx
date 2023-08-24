@@ -1,12 +1,10 @@
 import React from "react";
-import Navbar from "./navbar";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section>
-      <Navbar />
       <div className="h-screen w-full flex py-16 md:py-32 lg:py-48 bg-black items-center content-center justify-center">
         <div>
           <div className="flex items-center justify-center content-center p-4">
