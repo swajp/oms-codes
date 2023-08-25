@@ -54,9 +54,7 @@ export default async function page() {
               className="text-white text-2xl md:text-4xl lg:text-4xl font-light flex justify-between"
             >
               <div key={code.code}>{code.code}</div>
-              <div key={code.date}>
-                {moment(code.date).format("DD/MM v HH:mm")}
-              </div>
+              <div key={code.date}>{moment(code.date).format("HH:mm")}</div>
             </div>
           ))}
         </>

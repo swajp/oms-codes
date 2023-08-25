@@ -44,7 +44,7 @@ export default function Form() {
 
         setTimeout(() => {
           setIsSubmitting(false);
-        }, 0);
+        }, 60000);
       } else {
         setErrorInput("VYDRŽTE CHVÍLI PŘED DALŠÍM POSLÁNÍM...");
       }
